@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="wrapper">
+      <section id="inputs-section">
+        <div class="inputs-div" id="day-input-div">
+          <label for="day-input">DAY</label>
+          <input
+            autocomplete="false"
+            type="number"
+            id="day-input"
+            name="day"
+            placeholder="DD"
+          />
+          <p class="error-msg hide"></p>
+        </div>
+
+        <div class="inputs-div" id="month-input-div">
+          <label for="month-input">MONTH</label>
+          <input type="number" id="month-input" name="month" placeholder="MM" />
+          <p class="error-msg hide"></p>
+        </div>
+
+        <div class="inputs-div" id="year-input-div">
+          <label for="year-input">YEAR</label>
+          <input type="number" id="year-input" name="year" placeholder="YYYY" />
+          <p class="error-msg hide"></p>
+        </div>
+      </section>
+
+      <section id="button-control">
+        <hr />
+        <button id="arrow-btn">
+          <img src="./public/assets/images/icon-arrow.svg" alt="image" />
+        </button>
+      </section>
+
+      <section id="outputs-section">
+        <p class="outputs-para" id="year-output">
+          <span id="year-output-count">--</span> years
+        </p>
+
+        <p class="outputs-para" id="month-output">
+          <span id="month-output-count">--</span> months
+        </p>
+
+        <p class="outputs-para" id="day-output">
+          <span id="day-output-count">--</span> days
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

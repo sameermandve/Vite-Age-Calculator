@@ -1,0 +1,206 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --Purple: hsl(259, 100%, 65%);
+  --Light-Red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Off-White: hsl(0, 0%, 94%);
+  --Light-Grey: hsl(0, 0%, 86%);
+  --Smokey-Grey: hsl(0, 1%, 44%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Off-White);
+}
+
+#wrapper {
+  padding: 2rem;
+  margin: 2rem 0;
+  padding-top: 2.5rem;
+  background-color: var(--White);
+  border-radius: 20px;
+  border-bottom-right-radius: 230px;
+}
+
+#inputs-section {
+  display: grid;
+  grid-template-columns: 210px 210px 210px 80px;
+  column-gap: 25px;
+  margin-right: 2rem;
+}
+
+.inputs-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-div label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Smokey-Grey);
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+.inputs-div input[type="number"] {
+  border-style: solid;
+  border-color: var(--Light-Grey);
+  padding: 0.5rem 1.15rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 7px;
+  color: var(--Off-Black);
+}
+
+.inputs-div input[type="number"]:hover {
+  cursor: pointer;
+  border-color: var(--Purple);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.error-msg {
+  display: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Light-Red);
+  margin-left: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+#button-control {
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+hr {
+  height: 2px;
+  color: var(--Light-Grey);
+  margin-right: 2rem;
+}
+
+#arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Purple);
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  position: absolute;
+  right: 6px;
+  top: -43px;
+  appearance: none;
+  border: none;
+}
+
+#arrow-btn img {
+  width: 36px;
+  height: 34px;
+}
+
+#arrow-btn:hover {
+  background-color: var(--Off-Black);
+  cursor: pointer;
+}
+
+.outputs-para {
+  font-size: 5.75rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--Off-Black);
+}
+
+.outputs-para span {
+  color: var(--Purple);
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  #wrapper {
+    padding: 3.5rem 1.75rem;
+    width: 100%;
+    border-bottom-right-radius: 100px;
+  }
+
+  #inputs-section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    column-gap: 16px;
+    margin-right: 0;
+  }
+
+  .inputs-div {
+    max-width: 29%;
+  }
+
+  .inputs-div label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--Smokey-Grey);
+    letter-spacing: 2px;
+  }
+
+  .inputs-div input[type="number"] {
+    padding: 0.7rem 0.5rem;
+    font-size: 1.35rem;
+    border-radius: 10px;
+  }
+
+  .error-msg {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+  }
+
+  #button-control {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  hr {
+    margin-right: 0;
+  }
+
+  #arrow-btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 38%;
+    top: -34px;
+  }
+
+  .outputs-para {
+    font-size: 3rem;
+  }
+}
